@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+        {% if title%}
+        {{title}}
+        {% else %}
+        DC NAPA
+        {% endif %}
+        {% endblock title %}
+    </title>
+    <link rel="stylesheet" href="{% static 'dev_com/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'dev_com/css/style.css' %}">
+    {% block css %}{% endblock css%}
+</head>
+<body class="{% block body %}{% endblock %}">
+
+    {% block navbar %}{% endblock navbar%}
+    
+    {% block content %}{% endblock content%}
+
+
+    {% block footer %}{% include 'footer.html' %}{% endblock footer%}
+
+<script src="{% static 'dev_com/js/jquary.js' %}"></script>
+<script src="{% static 'dev_com/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'dev_com/js/bootstrap.min.js'%}"></script>
+<script src="{% static 'dev_com/js/script.js'%}"></script>
+{% block js %}{% endblock js%}
+</body>
+
+</html>

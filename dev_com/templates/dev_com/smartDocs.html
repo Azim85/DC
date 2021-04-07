@@ -1,0 +1,175 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'dev_com/css/bootstrap.css' %}">
+<link rel="stylesheet" href="{% static 'dev_com/css/responsive.css' %}">
+<link rel="stylesheet" href="{% static 'dev_com/css/product.css' %}">
+{% endblock css %}
+
+{% block body %}smartDocs{% endblock body %}
+
+{% block navbar %}
+  {% include 'navbar_light.html' %}
+{% endblock navbar %}
+
+{% block content %}
+
+    <section class="section1 w-100 mx-0 text-center">
+      <div class="section_content container">
+        <h1>Smart Docs</h1>
+
+        <p class="">Система электронного документооборота</p>
+      </div>
+    </section>
+
+    <section class="section2 container-fluid" style="margin-bottom: 150px">
+      <div class="container">
+        <h2 style="padding: 0 100px">Smart Docs</h2>
+        <div class="row row-cols-1 row-cols-md-2">
+          <div class="col w-50" style="padding: 0 115px">
+            <div>
+              Cовокупность автоматизированных процессов по работе с документами,
+              представленными в электронном виде, с реализацией концепции
+              «безбумажного делопроизводства».
+            </div>
+          </div>
+          <div class="col">
+            <div>
+              <span>
+                <img src="{% static 'dev_com/img/Vector (5).png' %}" class="" alt="" />
+              </span>
+              Экономия времени:
+            </div>
+            <div>
+              <span>
+                <img src="{% static 'dev_com/img/Vector (5).png' %}" class="" alt="" />
+              </span>
+              Более адекватное использование физического пространства и техники:
+            </div>
+            <div>
+              <span>
+                <img src="{% static 'dev_com/img/Vector (5).png' %}" class="" alt="" />
+              </span>
+              Повышение прозрачности внутренней работы предприятия
+            </div>
+            <div>
+              <span>
+                <img src="{% static 'dev_com/img/Vector (5).png' %}" class="" alt="" />
+              </span>
+              Повышение безопасности информации и документов
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="functions"
+      style="background: #1a1a1a; color: white; margin-bottom: 150px"
+    >
+      <div class="container">
+        <h2 style="padding: 50px 100px 0">Функции SmartDocs</h2>
+        <div class="row row-cols-md-2 row-cols-1">
+          <div class="col">
+            <p>- Адаптация решения под любой профиль компании и организации
+            </p>
+            <p>- Мобильность и удаленная работа
+            </p>
+            <p>- Полнофункциональный веб-клиент с персонифицированным интерфейсом
+            </p>
+            <p>- Отчеты и аналитика:
+            </p>
+            <p>- Отчеты по входящим документам
+              Отчет по структурным отделениям</p>
+            <p>- Мониторинг актуальных статусов, контроль
+              сроков исполнения поручений и
+              документов </p>
+          </div>
+          <div class="col">
+            <p>- Мониторинг актуальных статусов, контроль
+              сроков исполнения поручений и
+              документов </p>
+            <p>_ Наглядная визуализация «дерева
+              поручений» с отображением текущих
+              задач и исполнителей</p>
+            <p>- Обеспечение юридической значимости
+              при работе в системе
+              </p>
+            <p>- Постановка задач и контроль исполнения</p>
+            <p>- Создание любых типов документов</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section3 container-fluid" style="margin-bottom: 150px">
+      <div class="container">
+        <img
+          src="{% static 'dev_com/img/smart11.png' %}"
+          alt=""
+          class="img-fluid position-absolute"
+          style="right: 0; width: 650px"
+          srcset=""
+        />
+        <h2 style="padding: 0 100px">Как работает Smart Docs</h2>
+        <div class="row row-cols-1 row-cols-xl-2">
+          <div class="col w-50" style="padding: 0 115px">
+            <div>
+              <p><h4>Внутренние процессы</h4></p>
+              <p>1. Создание документа</p>
+              <p>2. Последовательный выбор получателей
+                (Согласование, подписи, ознакомления и
+               другие действия) </p>
+               <p>3. Запуск процесса (Контроль)  </p>
+            </div>
+            <div>
+              <h4>Внешние процессы</h4>
+              <p>1. Регистрация документа</p>
+              <p>2. Рассмотрение</p>
+              <p>3. Выдача резолюции</p>
+              <p>4. Контроль </p>
+              <p>5. Исполнение</p>
+              <p>6. Добавление в архив</p>
+            </div>
+          </div>
+          <div class="col"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="form" style="margin-bottom: 150px">
+      <div class="container">
+        <h2 class="w-75">
+          Установите тестовую версию совершенно бесплатно. Заполните форму и мы
+          с вами свяжемся
+        </h2>
+
+        <form class="mt-lg-5 " method="POST" action="{% url 'dev_com:smart_docs' %}">{% csrf_token %}
+          <div class="row row-cols-xl-4 row-cols-lg-3 row-cols-1 text-right justify-content-end  pt-2">
+            <div class="col">
+              <input type="text" class="form-control" name="name" placeholder="Имя" required />
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" name="last_name" placeholder="Фамилия" required/>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" id="phone" name="phone" placeholder="Номер телефона" required/>
+            </div>
+            <div class="col">
+              <button type="submit" class="btn" data-toggle="modal"
+                data-target=".bd-example-modal-lg">Отправить</button>
+            </div>
+            <div class="col">
+              <input type="hidden" class="form-control" name="category" value="{{flag}}" />
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+   {% endblock content %}
+
+   {% block js %}
+      <script src="https://kit.fontawesome.com/cb3bbb09f5.js" crossorigin="anonymous"></script>
+   {% endblock js %}
+ 

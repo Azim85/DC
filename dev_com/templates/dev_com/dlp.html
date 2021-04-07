@@ -1,0 +1,249 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'dev_com/css/bootstrap.css' %}">
+<link rel="stylesheet" href="{% static 'dev_com/css/responsive.css' %}">
+<link rel="stylesheet" href="{% static 'dev_com/css/product.css' %}">
+{% endblock css %}
+
+{% block body %}dlp{% endblock body %}
+
+{% block navbar %}
+  {% include 'navbar_light.html' %}
+{% endblock navbar %}
+
+{% block content %}
+
+  <section class="section1 w-100 mx-0 text-center">
+    <div class="section_content container">
+      <h1>Data Loss Prevention</h1>
+
+      <p class="">
+        Надежная защита от утечки информации <br />
+        и контроль рабочего процесса.
+      </p>
+    </div>
+  </section>
+
+  <section class="section2 container-fluid" style="margin-bottom: 150px">
+    <img src="{% static 'dev_com/img/Device - Macbook Pro.png' %}" alt="" class="img-fluid position-absolute" style="right: 0; width: 650px;"
+      srcset="" />
+    <div class="container">
+      <div class="row row-cols-1 row-cols-xl-2">
+        <div class="col w-50" style="padding: 0 100px ">
+          <h2 style="padding-bottom: 22px">DLP</h2>
+          <div>
+            <span>
+              <img src="{% static 'dev_com/img/Vector (5).png' %}" class="" alt="" />
+            </span>
+            Полный мониторинг действий сотрудника за компьютером
+          </div>
+          <div>
+            <span>
+              <img src="{% static 'dev_com/img/Vector (5).png' %}" class="" alt="" />
+            </span>
+            Гибкие отчеты с аналитикой по взаимодействию сотрудника с
+            компьютером
+          </div>
+          <div>
+            <span>
+              <img src="{% static 'dev_com/img/Vector (5).png' %}" class="" alt="" />
+            </span>
+            Предотвращение утечки с помощью ключевых слов, хранящихся в
+            файлах, сообщениях и письмах
+          </div>
+          <div>
+            <span>
+              <img src="{% static 'dev_com/img/Vector (5).png' %}" class="" alt="" />
+            </span>
+            Блокировка внешних способов вывода информации
+          </div>
+          <div>
+            <span>
+              <img src="{% static 'dev_com/img/Vector (5).png' %}" class="" alt="" />
+            </span>
+            Классификация сайтов и процессов на “Полезные и Бесполезные”
+          </div>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="functions text-break" style="background: #1a1a1a; color: white; margin-bottom: 150px">
+    <div class="container" style="padding-left: 115px;">
+      <h2 style="padding: 50px 16px 0">Возможности DLP</h2>
+      <div class="row row-cols-md-2 row-cols-1 py-md-5">
+        <div class="col ">
+          <ul class="nav nav-tabs d-block" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <a class="nav-link position-relative active" id="profile-tab" data-toggle="tab" href="#key" role="tab"
+                aria-controls="profile" aria-selected="false">Фильтрация по Ключевым словам
+                <span><i class="fas fa-arrow-right"></i></span>
+              </a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link position-relative" id="contact-tab" data-toggle="tab" href="#useful" role="tab"
+                aria-controls="contact" aria-selected="false">Классификация на полезные/бесполезные
+                сайта/процессы
+                <span><i class="fas fa-arrow-right"></i></span>
+              </a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link position-relative" id="contact-tab" data-toggle="tab" href="#block" role="tab"
+                aria-controls="contact" aria-selected="false">Блокировка внешних способов
+                вывода информации
+                <span><i class="fas fa-arrow-right"></i></span>
+              </a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link position-relative " id="home-tab" data-toggle="tab" href="#accaunt" role="tab"
+                aria-controls="home" aria-selected="true">Действия сотрудников и управление
+                аккаунтами
+                <span><i class="fas fa-arrow-right"></i></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="col">
+          <p>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="key" role="tabpanel" aria-labelledby="home-tab">
+              <div class="col">
+                <b>Название ключевого слова :</b>
+                <p>Группируете список ключевых слов.
+                  Пример “Бизнес документы” Слова:
+                  Бизнес План, Бизнес Стратегии, SWOT
+                  анализ</p>
+
+                <b>Частота :
+                </b>
+                <p>
+                  Настройте частоту отправок писем,
+                  сообщений и файлов с выбранными вами
+                  ключевых слов
+                </p>
+
+                <b>Приоритет :</b>
+                <p>
+                  Расставляйте приоритеты ключевых слов
+                  по уровню их конфиденциальности.
+                </p>
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="useful" role="tabpanel" aria-labelledby="profile-tab">
+              <div class="d-flex py-3 ">
+                <span>
+                  <img src="{% static 'dev_com/img/Vector (5).png' %}" class="mr-4" alt="" />
+                </span>
+                Классифицируйте процессы и сайты,
+                используемые сотрудниками на
+                полезные и бесполезные
+
+              </div>
+              <div class="d-flex py-3 ">
+                <span>
+                  <img src="{% static 'dev_com/img/Vector (5).png' %}" class="mr-4" alt="" />
+                </span>
+                Классифицируйте процессы и сайты,
+                используемые сотрудниками на
+                полезные и бесполезные
+
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="block" role="tabpanel" aria-labelledby="contact-tab">
+              <div class="d-flex py-3 ">
+                <span>
+                  <img src="{% static 'dev_com/img/Vector (5).png' %}" class="mr-4" alt="" />
+                </span>
+                Блокируйте посторонние USB устройства,
+                составляя черный и белый список
+                устройств
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="accaunt" role="tabpanel" aria-labelledby="contact-tab">
+              <div class="">
+                <b>Анализируйте эффективности сотрудников </b>
+                <p>Данный процесс происходит
+                  относительно всех прошлых
+                  подключенных модификаций в
+                  разделе “Политика: Правила” и
+                  выводит всю информацию в
+                  графическом и статистическом виде
+                  </p>
+                <div class="d-flex py-3 ">
+                  <span>
+                    <img src="{% static 'dev_com/img/Vector (5).png' %}" class="mr-4" alt="" />
+                  </span>
+                  Графики
+                </div>
+                <div class="d-flex py-3 ">
+                  <span>
+                    <img src="{% static 'dev_com/img/Vector (5).png' %}" class="mr-4" alt="" />
+                  </span>
+                  Статистика
+                </div>
+                <div class="d-flex py-3 ">
+                  <span>
+                    <img src="{% static 'dev_com/img/Vector (5).png' %}" class="mr-4" alt="" />
+                  </span>
+                  Статистика
+                </div>
+                <div class="d-flex py-3 ">
+                  <span>
+                    <img src="{% static 'dev_com/img/Vector (5).png' %}" class="mr-4" alt="" />
+                  </span>
+                  Отчеты
+                </div>
+              </div>
+            </div>
+          </div>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="form" style="margin-bottom: 150px">
+    <div class="container">
+      <h2 class="w-75">
+        Установите тестовую версию совершенно бесплатно. Заполните форму и мы
+        с вами свяжемся
+      </h2>
+
+    <form class="mt-lg-5 " method="POST" action="{% url 'dev_com:dlp' %}">{% csrf_token %}
+      <div class="row row-cols-xl-4 row-cols-lg-3 row-cols-1 text-right justify-content-end  pt-2">
+        <div class="col">
+          <input type="text" class="form-control" name="name" placeholder="Имя" required/>
+        </div>
+    
+        <div class="col">
+          <input type="text" class="form-control" name="last_name" placeholder="Фамилия" required />
+        </div>
+    
+        <div class="col">
+          <input type="text" class="form-control" id="phone" name="phone" placeholder="Номер телефона" required/>
+        </div>
+        <div class="col">
+          <button type="submit" class="btn" data-toggle="modal"
+            data-target=".bd-example-modal-lg">Отправить</button>
+        </div>
+          <div class="col">
+            <input type="hidden" class="form-control" name="category" value="{{flag}}" />
+          </div>
+      </div>
+    </form>
+    </div>
+  </section>
+{% endblock content %}
+{% block js %}
+  <script src="https://kit.fontawesome.com/cb3bbb09f5.js" crossorigin="anonymous"></script>
+{% endblock js %}

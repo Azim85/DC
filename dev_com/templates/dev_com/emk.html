@@ -1,0 +1,155 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'dev_com/css/bootstrap.css' %}">
+<link rel="stylesheet" href="{% static 'dev_com/css/responsive.css' %}">
+<link rel="stylesheet" href="{% static 'dev_com/css/product.css' %}">
+{% endblock css %}
+
+{% block body %}emk{% endblock body %}
+
+{% block navbar %}
+  {% include 'navbar_light.html' %}
+{% endblock navbar %}
+
+{% block content %}
+  <section class="section1 w-100 mx-0 text-center">
+    <div class="section_content container">
+      <h1>Единая медицинская карта</h1>
+
+      <p class="">
+        Автоматический учёт товаров в пределах склада без непосредственного
+        участия человека.
+      </p>
+    </div>
+  </section>
+
+  <section class="section2 container-fluid" style="margin-bottom: 150px">
+    <img src="{% static 'dev_com/img/emk1.png' %}" alt="" class="img-fluid position-absolute" style="right: 0; width: 650px" srcset="" />
+    <div class="container">
+      <div class="row row-cols-1 row-cols-xl-2">
+        <div class="col w-50" style="padding: 0 100px">
+          <h2>ЕМК</h2>
+          <section>
+            Медицинская платформа - единый информационный web ресурс,
+            предназначенный медицинским учреждениям для работы с пациентами.
+            Это единый центр для составления, хранения и обмена всей
+            медицинской и финансовой информации.
+          </section>
+          <section>
+            <div>
+              <span>
+                <img src="{% static 'dev_com/img/Vector (5).png' %}" class="" alt="" />
+              </span>
+              <h4>Регистратура</h4><br>
+            </div>
+            Возможность удаленной регистрации. Возможность записты своих
+            родственников по номеру/id пациента.
+          </section>
+          <section>
+            <div>
+              <span>
+                <img src="{% static 'dev_com/img/Vector (5).png' %}" class="" alt="" />
+              </span>
+              <h4>Финансы</h4>
+            </div>
+            Возможность удаленной регистрации. Возможность записты своих
+            родственников по номеру/id пациента.
+          </section>
+          <section>
+            <div>
+              <span>
+                <img src="{% static 'dev_com/img/Vector (5).png' %}" class="" alt="" />
+              </span>
+              <h4>Лабаратория</h4>
+
+            </div>
+            Возможность удаленной регистрации. Возможность записты своих
+            родственников по номеру/id пациента.
+          </section>
+
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="functions text-break" style="background: #1a1a1a; color: white; margin-bottom: 150px">
+    <div class="container">
+      <h2 style="padding: 70px 100px 0">Функции ЕМК</h2>
+      <div class="row row-cols-md-2 row-cols-1 py-md-5">
+        <div class="col pt-0">
+          <p><b>
+              Оперативно организовать процедуру
+              лечение пациентов
+
+            </b></p>
+          <p><b>
+              Единая система документооборота
+            </b></p>
+          <b>Автоматическое формирование отчёта
+            врачей, отделений и клиники
+          </b>
+          <p>Автоматизированная обработка
+            информации (формирование справки,
+            выписки, назначения, результата
+            анализов и др.)</p>
+        </div>
+
+
+        <div class="col pt-0">
+          <b>Электронная история болезни</b>
+          <div class="d-flex pt-3">
+            <span>
+              <img src="{% static 'dev_com/img/Vector (5).png' %}" class="mr-4" alt="" />
+            </span>
+            Создание единой базы медицинских
+данных пациентов, врачей.
+
+          </div>
+          <div class="d-flex pt-3">
+            <span>
+              <img src="{% static 'dev_com/img/Vector (5).png' %}" class="mr-4" alt="" />
+            </span>
+            Удалённый просмотр карточек
+амбулаторных и стационарных пациентов.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="form" style="margin-bottom: 150px">
+    <div class="container">
+      <h2>Заполните форму и мы с вами свяжемся</h2>
+
+      <form class="mt-lg-5 " method="POST" action="{% url 'dev_com:emk' %}">{% csrf_token %}
+        <div class="row row-cols-xl-4 row-cols-lg-3 row-cols-1 text-right justify-content-end  pt-2">
+          <div class="col">
+            <input type="text" class="form-control" name="name" placeholder="Имя" required/>
+          </div>
+      
+          <div class="col">
+            <input type="text" class="form-control" name="last_name" placeholder="Фамилия" required/>
+          </div>
+      
+          <div class="col">
+            <input type="text" class="form-control" id="phone" name="phone" placeholder="Номер телефона" required/>
+          </div>
+      
+        
+      
+          <div class="col">
+            <button type="submit" class="btn" data-toggle="modal"
+              data-target=".bd-example-modal-lg">Отправить</button>
+          </div>
+            <div class="col">
+              <input type="hidden" class="form-control" name="category" value="{{flag}}" />
+            </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+ {% endblock content %}

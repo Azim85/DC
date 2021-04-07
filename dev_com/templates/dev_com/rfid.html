@@ -1,0 +1,261 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'dev_com/css/bootstrap.css' %}">
+<link rel="stylesheet" href="{% static 'dev_com/css/responsive.css' %}">
+<link rel="stylesheet" href="{% static 'dev_com/css/product.css' %}">
+{% endblock css %}
+
+{% block body %}rfid{% endblock body %}
+
+{% block navbar %}
+  {% include 'navbar_light.html' %}
+{% endblock navbar %}
+
+{% block content %}
+  <section class="section1 w-100 mx-0 text-center">
+    <div class="section_content container">
+      <h1>Radio-frequency identification</h1>
+
+      <p class="">Быстрый и автоматизированный способ инвентаризации.</p>
+    </div>
+  </section>
+
+  <section class="section2 container-fluid" style="margin-bottom: 150px">
+    <img src="{% static 'dev_com/img/rfid1.png' %}" alt="" class="img-fluid position-absolute" style="right: 0; width: 650px" srcset="" />
+    <div class="container">
+      <div class="row row-cols-1 row-cols-xl-2">
+        <div class="col w-50" style="padding: 0 100px">
+          <h2>RFID</h2>
+          <div>
+            Автоматический учёт товаров в пределах склада без
+            непосредственного участия человека. Система, которая работает по
+            радиоволнам, считывая информацию на средней дистанции (8- 10м) за
+            долю секунды. Простой, но при этом многофункциональный метод
+            позволит в разы снизить ошибки в инвентаризации, снижая участие
+            человеческого фактора.
+          </div>
+          <div>
+            <span>
+              <img src="{% static 'dev_com/img/Vector (5).png' %}" class="" alt="" />
+            </span>
+            Минимизация человеческого фактора
+          </div>
+          <div>
+            <span>
+              <img src="{% static 'dev_com/img/Vector (5).png' %}" class="" alt="" />
+            </span>
+            Отсутствие необходимости в прямой видимости
+          </div>
+          <div>
+            <span>
+              <img src="{% static 'dev_com/img/Vector (5).png' %}" class="" alt="" />
+            </span>
+            Считывание информации при движении на большой скорости
+          </div>
+          <div>
+            <span>
+              <img src="{% static 'dev_com/img/Vector (5).png' %}" class="" alt="" />
+            </span>
+            В разы ускоренная инвентаризация за счет считывания на дальних
+            дистанциях
+          </div>
+          <div>
+            <span>
+              <img src="{% static 'dev_com/img/Vector (5).png' %}" class="" alt="" />
+            </span>
+            Устойчивость оборудования к воздействию окружающей среды.
+          </div>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="functions text-break" style="background: #1a1a1a; color: white; margin-bottom: 150px;">
+    <div class="container" style="padding-left: 115px;">
+      <h2 style="padding: 50px 0 0">Из чего состоит RFID</h2>
+      <div class="row row-cols-md-2 row-cols-1 py-md-5">
+        <div class="col">
+          <ul class="nav nav-tabs d-block" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <a class="nav-link position-relative active" id="home-tab" data-toggle="tab" href="#metka" role="tab" aria-controls="home"
+                aria-selected="true">Метка
+
+                <span><i class="fas fa-arrow-right"></i></span>
+              </a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link position-relative" id="profile-tab" data-toggle="tab" href="#schitivatel" role="tab" aria-controls="profile"
+                aria-selected="false">Считыватель
+                <span><i class="fas fa-arrow-right"></i></span>
+              </a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link position-relative" id="contact-tab" data-toggle="tab" href="#po" role="tab" aria-controls="contact"
+                aria-selected="false">Программное обеспечение
+                <span><i class="fas fa-arrow-right"></i></span>
+              </a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link position-relative" id="contact-tab" data-toggle="tab" href="#mobileapp" role="tab" aria-controls="contact"
+                aria-selected="false">Мобильное приложение
+                <span><i class="fas fa-arrow-right"></i></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="col p-0 pt-2 mt-1">
+          <p><div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="metka" role="tabpanel" aria-labelledby="home-tab">
+              <div class=" w-75">
+                Метка, играет одну из самых важных ролей в работе RFID системы Состоит из двух ключевых деталей: антенна и микросхема
+              </div>
+              <div class="row row-cols-3 pt-5 mt-3">
+                <div class=" text-center">
+                  <img class="img-fluid" style="border-radius: 50%; background: white; padding: 15px;" src="{% static 'dev_com/img/rfid_f11.png' %}" alt="">
+                  <div style="padding: 20px 0 10px;"><b>Антенна</b></div>
+                  Выделяет радиоволны
+                </div>
+                <div class=" text-center">
+                  <img class="img-fluid px-2" src="{% static 'dev_com/img/rfid_f12.png' %}" alt="">
+                </div>
+                <div class=" text-center">
+                  <img class="img-fluid" style="border-radius: 50%; background: white; padding: 15px;" src="{% static 'dev_com/img/rfid_f13.png' %}" alt="">
+                  <div style="padding: 20px 0 10px;"><b>Микросхема</b></div>
+                  Выводит информацию на экран
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="schitivatel" role="tabpanel" aria-labelledby="profile-tab">
+              <div class="col">
+                <b>Какие функции выполняет считыватель?</b>
+                <div class="d-flex pt-4 mt-2">
+                  <span>
+                    <img src="{% static 'dev_com/img/Vector (5).png' %}" class="mr-4" alt="" />
+                  </span>
+                  Принимает радиоволны 
+                </div>
+                <div class="d-flex pt-3">
+                  <span>
+                    <img src="{% static 'dev_com/img/Vector (5).png' %}" class="mr-4" alt="" />
+                  </span>
+                  Выводит информацию с меток на дисплей 
+                </div>
+                <div class="pt-5 my-4"><b >Существует два вида считывателя:</b></div>
+                <div class="row row-cols-2 mt-4 pt-2 w-75">
+                  <div class="col">
+                    <img src="{% static 'dev_com/img/rfid_f21.png' %}" alt="">
+                  </div>
+                  <div class="col">
+                    <img src="{% static 'dev_com/img/rfid_f22.png' %}" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="po" role="tabpanel" aria-labelledby="contact-tab">
+             <div class="row row-cols-2">
+              Компьютерная версия программного <br> обеспечения занимается организаторской частью 
+              <div class="col text-center py-4 mt-3 ">
+                <img src="{% static 'dev_com/img/rfid_f31.png' %}" class="img-fluid" alt="">
+                <div style="padding: 20px 0 10px;"><b>Данные</b></div>
+                Список всех 
+                ваших ОС и ТМЦ
+              </div>
+              <div class="col text-center py-4 mt-3 ">
+                <img src="{% static 'dev_com/img/rfid_f32.png' %}" class="img-fluid" alt="">
+                <div style="padding: 20px 0 10px;"><b>Отчеты</b></div>
+                Гибкие отчеты 
+                по проделанной работе
+              </div>
+              <div class="col text-center py-4 mt-3 ">
+                <img src="{% static 'dev_com/img/rfid_f33.png' %}" class="img-fluid" alt="">
+                <div style="padding: 20px 0 10px;"><b>Задачи</b></div>
+                Постановка задач, 
+                отвественным 
+                за инвентаризацию
+              </div>
+              <div class="col text-center py-4 mt-3 ">
+                <img src="{% static 'dev_com/img/rfid_f34.png' %}" class="img-fluid" alt="">
+                <div style="padding: 20px 0 10px;"><b>Сотрудники</b></div>
+                Закрепеление материальной 
+                ответственности
+              </div>
+             </div>
+            </div>
+            <div class="tab-pane fade" id="mobileapp" role="tabpanel" aria-labelledby="contact-tab">
+              <div class="">
+                <b>Возможности </b>
+                <div class="d-flex py-3 ">
+                  <span>
+                    <img src="{% static 'dev_com/img/Vector (5).png' %}" class="mr-4" alt="" />
+                  </span>
+                  Получение данных с меток в виде списка, имеющихся ОС и ТМЦ
+                </div>
+                <div class="d-flex py-3 ">
+                  <span>
+                    <img src="{% static 'dev_com/img/Vector (5).png' %}" class="mr-4" alt="" />
+                  </span>
+                  Отправка данных в учет (ПК версию) после проведения инвентаризации 
+                </div>
+                <div class="d-flex py-3 ">
+                  <span>
+                    <img src="{% static 'dev_com/img/Vector (5).png' %}" class="mr-4" alt="" />
+                  </span>
+                  Видимость задач, поставленных администратором в компьютерной версии ПО
+                </div>
+                <div class="d-flex py-3 ">
+                  <span>
+                    <img src="{% static 'dev_com/img/Vector (5).png' %}" class="mr-4" alt="" />
+                  </span>
+                  Подключение устройств (считывателей) и список всех когда-либо подключенных устройств
+                </div>
+              </div>
+            </div>
+          </div></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="form" style="margin-bottom: 150px">
+    <div class="container">
+      <h2 class="w-75">
+        Установите тестовую версию совершенно бесплатно. Заполните форму и мы
+        с вами свяжемся
+      </h2>
+
+      <form class="mt-lg-5 " method="POST" action="{% url 'dev_com:rfid' %}">{% csrf_token %}
+        <div class="row row-cols-xl-4 row-cols-lg-3 row-cols-1 text-right justify-content-end  pt-2">
+          <div class="col">
+            <input type="text" class="form-control" name="name" placeholder="Имя" required/>
+          </div>
+      
+          <div class="col">
+            <input type="text" class="form-control" name="last_name" placeholder="Фамилия" required/>
+          </div>
+      
+          <div class="col">
+            <input type="text" class="form-control" id="phone" name="phone" placeholder="Номер телефона" required/>
+          </div>
+      
+        
+      
+          <div class="col">
+            <button type="submit" class="btn" data-toggle="modal"
+              data-target=".bd-example-modal-lg">Отправить</button>
+          </div>
+            <div class="col">
+              <input type="hidden" class="form-control" name="category" value="{{flag}}" />
+            </div>
+        </div>
+      </form>
+    </div>
+  </section>
+{% endblock content %}
+{% block js %}
+  <script src="https://kit.fontawesome.com/cb3bbb09f5.js" crossorigin="anonymous"></script>
+{% endblock js %}

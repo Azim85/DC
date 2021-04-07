@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+
+/* HEADER */
+
+.header {
+  border-bottom: 1px solid white;
+}
+
+header .nav-item {
+  padding-right: 80px;
+}
+
+/* section1 */
+
+.section1 {
+  color: white;
+  background-size: cover !important;
+  height: 520px;
+  margin-bottom: 150px;
+  display: flex;
+  align-items: center;
+}
+
+.dlp .section1 {
+  background: url("../img/dlp_main.png") center no-repeat;
+}
+.bep .section1 {
+  background: url("../img/3bepp.png") center no-repeat;
+}
+.emk .section1 {
+  background: url("../img/emk.png") center no-repeat;
+}
+.rfid .section1 {
+  background: url("../img/rfid.png") center no-repeat;
+}
+.smartDocs .section1 {
+  background: url("../img/smartdocs.png") center no-repeat;
+}
+
+/* section2 */
+
+.emk .section2 .row .col div {
+  display: flex;
+  padding: 0;
+}
+.emk .section2 .row .col section {
+  padding: 20px 0;
+}
+.section2 .row .col div {
+  display: flex;
+  padding: 20px 0;
+}
+.section2 .row .col img {
+  padding-right: 25px;
+}
+
+/* functions */
+
+
+
+/* form */
+
+.form form input {
+  border: none;
+  border-bottom: 1px solid black;
+  border-radius: 0%;
+}
+
+.form .col {
+  margin: 20px 0;
+  padding: 0 37px;
+}
+
+.form button {
+  padding: 15px 40px;
+  color: #fff;
+  background: #1a9c85;
+}
+
+.smartDocs .section3 .col div {
+  margin-top: 50px;
+}
+
+
+
+/* functions */
+.rfid .functions {
+  min-height: 740px;
+}
+.dlp .functions {
+  min-height: 650px;
+}
+.bep .functions {
+  min-height: 630px;
+}
+
+.smartDocs .functions .col, .emk .functions .col{
+  padding: 12px 130px 100px 115px ;
+}
+.dlp .functions .col p{
+  margin-top: 10px;
+}
+.bep .functions .col p, .emk .functions .col p{
+  margin: 10px 0 40px;
+}
+
+.functions .col p,
+.functions .col li {
+  margin: 30px 0;
+}
+
+
+.functions .nav-link {
+  font-weight: bolder;
+  color: #fff;
+}
+.functions .nav-item .active {
+  font-size: 26px;
+  color: #1a9c85;
+  background: none;
+  border: none;
+}
+.functions .nav-item .active span {
+  display: block;
+}
+.functions .nav-tabs {
+  border: none;
+}
+
+.functions .nav-item span {
+  color: #1a9c85;
+  font-size: 24px;
+  left: -20px;
+  top: 10px;
+  position: absolute;
+  display: none;
+}
+
+

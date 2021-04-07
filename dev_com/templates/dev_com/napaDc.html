@@ -1,0 +1,245 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'dev_com/css/responsive.css' %}">
+{% endblock css %}
+
+{% block content %}
+
+{% block navbar %}{% include 'navbar_dark.html' %}{% endblock navbar %}
+
+
+    <section class="section1_main container-fluid w-100 mx-0 ">
+        <div class="section_content container">
+            <h1>Цифровые решения <br class="d-none d-md-block">
+                для вашего бизнеса</h1>
+    
+            <p class="py-3">Автоматизируем процессы. Внедряем ПО. Ускоряем процесс работы. </p>
+            <button class="btn_head mt-3" type="button" class="btn ">Ознакомиться с продуктами</button>
+        </div>
+    </section>
+    
+    
+    <section class="section2 container-fluid p-md-0" style="margin-bottom: 160px;" id="about">
+        <div class="col-md-8 offset-md-4  p-md-0">
+            <div style="padding: 0 40% 0 0;">
+                <h2>Разработчик надежного <br>
+                    программного обеспечения.</h2>
+                <p style="margin: 30px 0 50px 0;">
+                    NAPA DC - это команда профессионалов в сфере IT.
+                    Мы увеличиваем эффективность рабочего процесса при помощи наших методик и разработок ПО, которые
+                    позволяют нашим клиентам получить результат в короткие сроки. Нашими клиентами являются
+                    государственные структуры, корпорации, банки, предприятия малого, среднего и крупного бизнеса.
+                </p>
+            </div>
+            <img src="{% static 'dev_com/img/section2.png' %}" class="w-100 img-fluid" alt="" srcset="">
+        </div>
+    </section>
+    
+    
+    <section class="product" style="margin-bottom: 150px;" id="product">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 pt-5">
+                    <h2>Наши <br>
+                        продукты</h2>
+                    <p>
+                        Продукты NAPA DC нацелены
+                        на ускорение бизнес процессов путём упрощения и оптимизации труда
+                    </p>
+                </div>
+    
+                <div class="col-lg-4 pt-3 beep">
+                    <div class="product-card">
+                        <div>
+                            <p>
+                                <img src="{% static 'dev_com/img/3 BEEP.png' %}" alt="" srcset="">
+                            </p>
+                            <h3 class="pt-md-4 pt-md-3" style="margin-bottom: 10px;">3 BEEP</h3>
+                            <p>Значительно упрощает процесс обратной связи с клиентами, при помощи объединения всех
+                                каналов связи с клиентом в одном месте</p>
+                        </div>
+                            <a href="{% url 'dev_com:beep' %}" class="beep_p">Подробнее</a>
+                    </div>
+                </div>
+    
+                <div class="col-lg-4 pt-3 rfid">
+                    <div class="product-card">
+                        <div>
+                            <p>
+                                <img src="{% static 'dev_com/img/RFID icon (1).png' %}" alt="" srcset="">
+                            </p>
+                            <h3 class="pt-md-4 pt-md-3" style="margin-bottom: 10px;">RFID</h3>
+                            <p>Позволяет вести автоматический учёт товаров в пределах склада с минимальным участием
+                                человеческого фактора, за счет системы идентикации радиоволн .</p>
+                        </div>
+                        <a href="{% url 'dev_com:rfid' %}" class="rfid_p">Подробнее</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 pt-3 emk">
+                    <div class="product-card">
+                        <div>
+                            <p>
+                                <img src="{% static 'dev_com/img/emk icon.png' %}" alt="" srcset="">
+                            </p>
+                            <h3 class="pt-md-4 pt-md-3" style="margin-bottom: 10px;">EMK</h3>
+                            <p>Автоматизированная система управления медучреждений. Предоставляет полный учет,
+                                статистику и отчеты о пациентах и сотрудниках</p>
+                        </div>
+                        <a href="{% url 'dev_com:emk' %}" class="emk_p">Подробнее</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 pt-3 dlp">
+                    <div class="product-card">
+                        <div>
+                            <p>
+                                <img src="{% static 'dev_com/img/dlp.png' %}" alt="" srcset="">
+                            </p>
+                            <h3 class="pt-md-4 pt-md-3" style="margin-bottom: 10px;">DLP</h3>
+                            <p>Надежная защита от утечки информации и контроль над рабочим процессом. </p>
+                        </div>
+                        <a href="{% url 'dev_com:dlp' %}" class="dlp_p">Подробнее</a>
+                    </div>
+                </div>
+    
+                <div class="col-lg-4 pt-3 smart_docs">
+                    <div class="product-card">
+                        <div>
+                            <p>
+                                <img src="{% static 'dev_com/img/smart-docs icon.png' %}" alt="" srcset="">
+                            </p>
+                            <h3 class="pt-md-4 pt-md-3" style="margin-bottom: 10px;">Smart Docs</h3>
+                            <p>Система электронного документооборота</p>
+                        </div>
+                        <a href="{% url 'dev_com:smart_docs' %}" class="smart_docs_p">Подробнее</a>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="partner container " style="margin-bottom: 150px;" id="partner">
+        <h2 class="ml-3 text-center text-sm-left">Наши партнеры</h2>
+        <div class="row row-cols-2 row-cols-sm-3 row-cols-lg-6 text-center" style="margin-top: 84px;">
+            <div class="col pt-3">
+                <img src="{% static 'dev_com/img/abitech 1.png' %}" class="img-fluid" alt="" srcset="">
+            </div>
+            <div class="col">
+                <img src="{% static 'dev_com/img/schneider-group-500x136 2.png' %}" class="img-fluid" alt="" srcset="">
+            </div>
+            <div class="col">
+                <img src="{% static 'dev_com/img/Forbis logo.png' %}" class="img-fluid" alt="" srcset="">
+            </div>
+            <div class="col">
+                <img src="{% static 'dev_com/img/arta_board_570x300 ARTA 1.png' %}" class="img-fluid" alt="" srcset="">
+            </div>
+            <div class="col">
+                <img src="{% static 'dev_com/img/logo_small2.png' %}" class="img-fluid" alt="" srcset="">
+            </div>
+            <div class="col">
+                <img src="{% static 'dev_com/img/Bergsoft (1).png' %}" class="img-fluid" alt="" srcset="">
+            </div>
+        </div>
+    </section>
+    
+    <section class="why container" style="margin-bottom: 170px;" id="why_we">
+        <h2 style="margin-bottom: 70px;">Почему мы</h2>
+        <div class="row row-cols-lg-3 row-cols-1">
+            <div class="col p-lg-0 d-flex flex-column justify-content-between">
+                <div>
+                    <h4>Сертифицированная отечественная продукция</h4>
+                    <p>Наша продукция получила сертификат удостоверяющий её соответствие требованиям технических
+                        регламентов, положениям стандартов, сводам правил или условиям договоров.</p>
+                </div>
+                <img src="{% static 'dev_com/img/Rectangle 67.png' %}" class="img-fluid" alt="" srcset="">
+            </div>
+            <div class="col p-lg-0 d-flex flex-column justify-content-between">
+                <div>
+                    <h4>Предоставление уникальных услуг за приемлимые цены</h4>
+                    <p>Соотношение цены и качества продукции. Разработка и внедрение современных систем автоматизации
+                        рабочих процессов для структур
+                        и организаций</p>
+                </div>
+                <img src="{% static 'dev_com/img/Rectangle 68.png' %}" class="img-fluid" alt="" srcset="">
+            </div>
+            <div class="col p-lg-0 d-flex flex-column justify-content-between">
+                <div>
+                    <h4>Контроль процесса внедрения продукции</h4>
+                    <p>Возможность следить за каждым этапом внедрения нашей продукции,
+                        и вносить изменения в процессе работы. Также мы обучаем корректно использовать систему. </p>
+                </div>
+                <img src="{% static 'dev_com/img/Rectangle 69.png' %}" class="img-fluid" alt="" srcset="">
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+    <section class="form" style="margin-bottom: 150px;" id="contact">
+        <div class="container">
+            <h2>Заполните форму и мы с вами свяжемся</h2>
+    
+            <form class="mt-lg-5 " method="POST" action="{% url 'dev_com:index' %}">{% csrf_token %}
+                <div class="row row-cols-xl-4 row-cols-lg-3 row-cols-1 text-right justify-content-end  pt-2">
+                    <div class="col">
+                        <input type="text" class="form-control" name="name" placeholder="Имя" required/>
+                    </div>
+    
+                    <div class="col">
+                        <input type="text" class="form-control" name="last_name" placeholder="Фамилия" required />
+                    </div>
+    
+                    <div class="col">
+                        <input type="text" class="form-control" id="phone" name="phone" placeholder="Номер телефона" required/>
+                    </div>
+                    <div class="col">
+                        <button type="submit" class="btn" data-toggle="modal" data-target=".bd-example-modal-lg">Отправить</button>
+                    </div>
+                    <div class="col">
+                        <input type="hidden" class="form-control" name="category" value="{{flag}}" />
+                    </div>
+                </div>
+            </form>
+    
+        </div>
+    </section>
+
+
+    
+
+
+    {% endblock content%}
+
+    {% block js %}
+        <script>
+            $('.beep').click(function () {
+                $('.beep_p')[0].click()
+            })
+
+            $('.rfid').click(function () {
+                $('.rfid_p')[0].click()
+            })
+
+            $('.emk').click(function () {
+                $('.emk_p')[0].click()
+            })
+
+            $('.dlp').click(function () {
+                $('.dlp_p')[0].click()
+            })
+
+            $('.smart_docs').click(function () {
+                $('.smart_docs_p')[0].click()
+            })
+
+            
+        </script>
+    {% endblock js %}
+
+   

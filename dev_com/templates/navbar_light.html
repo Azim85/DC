@@ -1,0 +1,44 @@
+<header class="header">
+    <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top" style="margin: 12px 0">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'dev_com:index' %}">LOGO</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'dev_com:index' %}?#about">О нас <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <div class="dropdown h-100 d-block d-lg-flex align-items-center" style="border: none;">
+                            <a class=" dropdown-toggle" style="border: none; color: #1a1a1a;" href="#" role="button" id="dropdownMenuLink"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Наши продукты
+                            </a>
+                        
+                            <div class="dropdown-menu" style="border: none;" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="{% url 'dev_com:beep' %}">3Beep</a>
+                                <a class="dropdown-item" href="{% url 'dev_com:rfid' %}">RFID</a>
+                                <a class="dropdown-item" href="{% url 'dev_com:emk' %}">EMK</a>
+                                <a class="dropdown-item" href="{% url 'dev_com:dlp' %}">DLP</a>
+                                <a class="dropdown-item" href="{% url 'dev_com:smart_docs' %}">SmartDocs</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'dev_com:index' %}?#why_we">Почему мы</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'dev_com:index' %}?#partner">Наши партнеры</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'dev_com:index' %}?#contact">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
